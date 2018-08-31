@@ -1,0 +1,273 @@
+<html>
+
+<head>
+    <title>Javascript.....</title>
+</head>
+
+<body style="background-color:black;color:antiquewhite">
+    <div>
+        <h1>Haiiiiii....................</h1>
+        <p>JavaScript basics ...............</p>
+        <center><img src="enfield.jpg" style="width:1350px"></center>
+    </div>
+
+
+    <!-- Variable declaration..... -->
+
+    <script>
+        //inline example.....
+
+        //variable mutation.....
+
+        var num = 13214;
+        console.log(num);
+        console.log(num1);
+        var num1;
+
+    </script>
+
+
+
+
+    <!-- external example..... -->
+
+    <script src="1.js">
+
+
+    </script>
+
+
+
+
+    <!-- coercion..... -->
+
+    <script>
+        //type coercion.....
+
+        console.log(5 < 6)
+        console.log("coercion :" + (false < 0));
+
+    </script>
+
+
+
+
+    <!-- operators..... -->
+
+    <script>
+        var op = 0;
+        console.log("coercion example using operator: ");
+        console.log('0' == op);
+        console.log('0' === op);
+
+    </script>
+
+
+
+
+
+    <!-- if else statement..... -->
+
+    <script>
+        var one = 1;
+        if (one) {
+            console.log("onetrue");
+        } else {
+            console.log("onefalse");
+        }
+
+        //expression
+        var exp;
+        exp = 100987;
+        console.log("Expression :" + exp);
+
+
+        //ststement
+        var st = 123;
+        if (st > 90) {
+            console.log("Statement: True");
+        } else {
+            console.log("Statement: False");
+        }
+
+        //switch
+
+        var swth = 5465246;
+        switch (swth) {
+            case 1:
+                console.log("haiiiiiii....." + swth);
+                break;
+            case 2:
+                console.log("hellooooo....." + swth);
+                break;
+            case swth:
+                console.log("Vanakammm....." + swth);
+                break;
+            default:
+                console.log("default.......")
+
+        }
+
+    </script>
+
+
+
+
+
+    <!-- Arrays..... -->
+
+    <script>
+        var actors = ['ramcharan', 'rithick', 'roman', 'pattinson', 'radcliffe', 'rock', 'aji'];
+        console.log(" Length :" + actors.length);
+        console.log(actors);
+        var number = new Array();
+        number = [2, 2, 3, 131, 3234, 45, 656, 7787];
+        console.log(number);
+        console.log(number.shift(2) + " Shift  :" + number);
+        console.log(number.push(100, 200, 300) + " Push :" + number);
+        console.log(actors.shift() + " Shift :" + actors);
+        console.log(actors.unshift('ramcharan') + " UnShift :" + actors);
+        console.log(actors.push('mammuu') + " Push :" + actors);
+        console.log(actors.pop('mammu') + " Pop :" + actors);
+        console.log(actors.slice('roman') + "  Slice :" + actors);
+
+    </script>
+
+
+
+
+
+    <!--  Function..... -->
+
+    <script>
+        //function method.....
+
+        (function(name) {
+            console.log("Function...... :")
+            console.log("My name is :" + name);
+        })('Crazy Tams.....');
+
+        // another method....
+
+        var myNameFunction = function(name1) {
+            name1 = name1 || 'Tams....'
+            console.log("Another Function  :");
+            console.log("My name is  :" + name1);
+        }
+        myNameFunction('Tamilarasi....');
+        myNameFunction();
+
+    </script>
+
+
+
+
+
+    <!-- Object Example..... -->
+
+    <script>
+        //example1....
+        var objectEx = {
+            Name: 'Tamilarasi',
+            Age: '20',
+            Qualification: 'BE - ECE',
+            College: 'KSRIET , Tiruchengode',
+            Hobby: 'Drawing',
+            Address: {
+                Street: '4th cross road , RK street , Omalur(TK)',
+                City: 'Salem',
+                Pincode: '636455'
+            },
+            PhoneNo: '9952354229',
+            EmailID: 'tamilkavi243@gmail.com'
+
+        };
+
+        console.log(objectEx);
+        objectEx.Name = 'Tams...';
+        objectEx['Age'] = '19';
+        var change1 = 'Hobby';
+        objectEx[change1] = 'Pencil drawing';
+        console.log(objectEx);
+
+
+        //example 2.....
+
+        var objectNext = new Object();
+        objectNext.name = 'Tamilarasi.....';
+        objectNext.nickname = 'Crazy Tams.....';
+        objectNext.hubby = 'Aji.....';
+        console.log(objectNext);
+
+    </script>
+
+
+
+
+    <!-- function inside the object..... -->
+
+    <script>
+        var details = {
+            Name: 'Tamilarasi',
+            Age: '20',
+            Qualification: 'BE - ECE',
+            College: 'KSRIET , Tiruchengode',
+            Hobby: 'Drawing',
+            yearCalculation: function() {
+                this.yearOfBirth = 2018 - this.Age;
+            }
+        };
+        details.yearCalculation();
+        console.log(details);
+
+
+        //or.....
+        var details = {
+            Name: 'Tamilarasi',
+            Age: '20',
+            Qualification: 'BE - ECE',
+            College: 'KSRIET , Tiruchengode',
+            Hobby: 'Drawing',
+            CalculateYear: function(age) {
+                console.log(2018 - age);
+            }
+        };
+        details.CalculateYear(21);
+
+    </script>
+
+
+
+
+    <!-- Loops..... -->
+    <script>
+        var array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log("array  :" + array1.length);
+
+        for (var i = 0; i < array1.length; i++) {
+            console.log(i + " " + array1[i]);
+        }
+
+
+        var j = 0;
+        while (j < array1.length - 1) {
+            console.log("while using  :" + array1[j]);
+            j++;
+        }
+
+
+        for (var j = 0; j < array1.length; j++) {
+            if (j === 6) {
+                break;
+            }
+            if (j === 4) {
+                continue;
+            }
+            console.log("Break Continue  :" + array1[j]);
+        }
+
+    </script>
+
+</body>
+
+</html>
